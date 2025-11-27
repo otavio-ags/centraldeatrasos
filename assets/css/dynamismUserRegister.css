@@ -1,0 +1,43 @@
+#toast-container {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity 0.5s, bottom 0.5s;
+}
+
+#toast-container.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px;
+}
+
+#toast-container.success { background-color: #4CAF50; }
+#toast-container.error { background-color: #F44336; } 
+#toast-container.warning { background-color: #ff9800; }
+
+input.invalid, select.invalid {
+    border: 2px solid #F44336 !important;
+    background-color: #fff8f8;
+}
+
+.error-text {
+    color: #F44336;
+    font-size: 11px;
+    margin-top: 5px;
+    display: none;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+}

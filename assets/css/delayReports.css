@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+@media print {
+    /* Oculta o que não é necessário para impressão */
+    .filtros, 
+    .btn-print, 
+    header, 
+    footer {
+        display: none !important;
+    }
+
+    /* Centraliza o relatório no momento da impressão */
+    html, body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 !important;
+    }
+    
+    /* Inclusão para permitir a impressão com cores */
+    .container, th {
+        -webkit-print-color-adjust: exact !important; 
+        print-color-adjust: exact !important;
+    }
+
+    .container {
+        background-color: #071d34 !important; 
+        color: #fff !important;
+        margin-top: auto; 
+        margin-bottom: auto; 
+        width: 100% !important; 
+        max-width: none !important;
+        padding: 20px !important;
+        box-shadow: none !important;
+    }
+
+    th {
+        background-color: #071d34 !important;
+        color: #fff !important;
+        border-color: #ddd !important;
+    }
+
+    table, th, td {
+        border-color: #ddd !important;
+    }
+    
+    table {
+        font-size: 10pt;
+    }
+    
+    h2{
+        margin-bottom: 5px !important;
+    }
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1500px;
+    width: 1350px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #071d34;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: #fff;
+}
+
+.filtros {
+    height: 90px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    /* border-radius: 5px; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+.filtros label, .filtros input, .filtros select, .filtros button {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.filtros input{
+    outline: none;
+    text-indent: 7px;
+}
+
+.filtros button{
+    height: 30px;
+    width: 110px;
+    border: none;
+    border-radius: 7px;
+}
+
+.filtros button:hover{
+    background-color: #ccc;
+}
+
+.btn-print{
+    margin-bottom: 25px;
+    height: 30px;
+    width: 130px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-print:hover{
+    background-color: #ccc;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table, th, td {
+    border: 2px solid #ddd;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #071d34;
+}
+
+h2{
+    margin-bottom: 10px;
+}
+

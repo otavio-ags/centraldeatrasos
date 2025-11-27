@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.lado-esquerdo{
+    flex: 0 0 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.items-register{
+    width: 100%;
+    max-width: 400px;
+}
+
+h2{
+   display: flex;
+   justify-content: center;
+   padding: 10px;
+   margin-bottom: 15px;
+   color: #071d34;
+}
+
+select, input{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #071d34;
+    border-radius: 7px;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding: 10px;
+    background-color: #071d34;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #ccc;
+    color: #071d34;
+    border: 1px solid #071d34;
+}
+
+
+.lado-direito{
+    flex: 0 0 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/Sprinkle.svg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    position: relative; 
+}
+
+.logo-register {
+    width: 550px;  
+    height: auto;  
+    z-index: 10;   
+}
