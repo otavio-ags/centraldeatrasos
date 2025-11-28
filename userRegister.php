@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
         
-$sqlSelect = 'SELECT id_usuario, nome_usuario FROM usuarios_cadastrados WHERE tipo_usuario = "usuario-admin"';
+$sqlSelect = 'SELECT id_usuario, nome_usuario FROM usuarios_cadastrados WHERE tipo_usuario = "Usuario Admin"';
 $result = $conn->query($sqlSelect); 
 
 ?>
@@ -88,7 +88,7 @@ $result = $conn->query($sqlSelect);
     <main>
         <div class="div-cadastro">
             <div class="logo">
-                <img src="assets/LogoUnica.svg" alt="Logo Única">
+                <img src="assets/img/LogoUnica.svg" alt="Logo Única">
             </div>
             <form action="userRegister.php" method="post" autocomplete="off" id="form-registro">
                 <h2>Cadastro de Usuário</h2>
@@ -106,8 +106,8 @@ $result = $conn->query($sqlSelect);
                     <label for="tipo-usuario">Tipo de Usuário</label>
                     <select name="select-tipo-usuario" id="itipo-usuario" required>
                         <option value="" disable select hidden>Selecione o tipo</option>
-                        <option value="Usuário Comum">Usuário Comum</option>
-                        <option value="Usuário Admin">Usuário Admin</option>
+                        <option value="Usuario Comum">Usuário Comum</option>
+                        <option value="Usuario Admin">Usuário Admin</option>
                     </select>
                     <span class="error-text">Selecione o tipo de usuário.</span>
                 </div>

@@ -1,6 +1,6 @@
 <?php
 
-include_once('includes/auth_check.php';)
+include_once('includes/auth_check.php');
 include_once('config/conexao.php');
 
 $turmas = [];
@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                  <div class="items-register">
                     <h2>Registro de Atraso</h2>
                     
-                    <form action="actions/registerDelay.php" method="post" id="form-registro">
+                    <form action="registerDelay.php" method="post" id="form-registro">
                         
                         <label for="turma">Turma do aluno</label><br>
                         <select name="select-turma" id="iselect-turma" required>
@@ -135,7 +135,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                  </div>
              </section>
              <section class="lado-direito">
-                <img src="img/LogoCompletaBranca.svg" alt="logo-site" class="logo-register">
+                <img src="assets/img/LogoCompletaBranca.svg" alt="logo-site" class="logo-register">
              </section>
     </main>
 

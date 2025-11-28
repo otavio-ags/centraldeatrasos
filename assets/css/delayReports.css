@@ -71,8 +71,8 @@ body{
 }
 
 .container {
-    max-width: 1500px;
-    width: 1350px;
+    max-width: 1300px;
+    width: 95%;
     margin: 20px auto;
     padding: 20px;
     background-color: #071d34;
@@ -88,15 +88,19 @@ body{
     /* border-radius: 5px; */
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
     align-items: center;
 }
 .filtros label, .filtros input, .filtros select, .filtros button {
     margin-right: 10px;
-    cursor: pointer;
+}
+
+.motivo_atraso{
+    width: 100px;
 }
 
 .filtros input{
+    cursor: pointer;
     outline: none;
     text-indent: 7px;
 }

@@ -15,13 +15,12 @@ include_once('includes/auth_check.php');
 <body>
     <header>
         <nav>
-            <img class="logo" src="assets/LogoUnicaMenor.svg" alt="">
+            <img class="logo" src="assets/img/LogoUnicaMenor.svg" alt="">
             <ul class="nav-list">
-                <li><a href="home.php">Início</a></li>
                 <li><a href="registerDelay.php" target="_blank">Registro de Atrasos</a></li>
                 
                 <?php
-                if(isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] === 'usuario-admin'){
+                if(isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] === 'Usuario Admin'){
                 ?>
                     <li><a href="userRegister.php" target="_blank">Cadastro de Usuário</a></li>
                 <?php
@@ -40,7 +39,7 @@ include_once('includes/auth_check.php');
             A Central de Atrasos foi desenvolvida para transformar a gestão da pontualidade dos alunos, substituindo processos manuais e demorados. Nosso foco é simplificar a rotina, garantindo que o registro de atrasos seja uma tarefa rápida e precisa, centralizada na Secretaria.
         </p>
         <h2>
-            Principais vantagens 🚀
+            Principais vantagens
         </h2>
         <ul>
             <li>
@@ -58,7 +57,6 @@ include_once('includes/auth_check.php');
         </h2>
         <p>
             A segurança e a integridade dos dados são prioridades no Central de Atrasos. O acesso à plataforma é controlado para garantir que apenas o pessoal autorizado possa interagir com o registro e a gestão dos dados.
-            <img src="../img/imgSegurança.jpg" alt="" width="600px" height="370px" style="display: block; margin: 20px auto;">
             Para utilizar qualquer funcionalidade, o acesso é obrigatório via login e senha individuais. Esta medida garante a rastreabilidade de todas as ações e mantém a segurança de todo o sistema.
             O cadastro e a manutenção de todas as contas de acesso são responsabilidade do Usuário Administrador (Admin). O Admin possui o controle total sobre a equipe que utilizará a plataforma.
         </p>

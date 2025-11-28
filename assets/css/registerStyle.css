@@ -17,13 +17,13 @@ body {
 
 .div-cadastro {
     background-color: white;
-    width: 120%;
-    width: 400px;
-    /* height: 650px; */
+    width: 350px;
+    max-width: 450px;
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     padding: 0;
     overflow: hidden;
+    margin: 20px; 
 }
 
 
@@ -34,8 +34,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom-left-radius: 50% 20%;
-    border-bottom-right-radius: 50% 20%;
+    border-radius: 0 0 50% 50% / 0 0 20% 20%; 
     margin-bottom: 20px;
 }
 
@@ -91,6 +90,7 @@ input:focus, select:focus {
     color: white;
     font-size: 1rem;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .btn-register:hover {

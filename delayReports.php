@@ -18,7 +18,7 @@ $motivoAtraso = filter_input(INPUT_GET, 'motivo_atraso', FILTER_SANITIZE_SPECIAL
 
 $resultados = [];
 $params = [];
-$whereClauses = ["1=1"]; // Cláusula base para facilitar a adição de filtros
+$whereClauses = ["1=1"];
 
 $turmas = [];
 
@@ -48,11 +48,10 @@ try {
     }
 
     if (!empty($motivoAtraso) && array_key_exists($motivoAtraso, $mapaMotivos)) {
-        // Pega o texto completo do motivo que está no banco (ex: 'Atraso no transporte coletivo')
         $motivoParaFiltrar = $mapaMotivos[$motivoAtraso]; 
         
         $whereClauses[] = "r.motivo_atraso = :motivo_atraso";
-        $params[':motivo_atraso'] = $motivoParaFiltrar; // USA O TEXTO COMPLETO!
+        $params[':motivo_atraso'] = $motivoParaFiltrar;
     }
 
     $sqlRelatorio = "
@@ -71,7 +70,7 @@ try {
         WHERE 
             " . implode(' AND ', $whereClauses) . "
         ORDER BY 
-            r.data_atraso DESC
+            r.data_atraso DESC, r.horario_chegada DESC
     ";
 
     $stmtRelatorio = $conn->prepare($sqlRelatorio);
@@ -126,8 +125,8 @@ try {
                 </div>
                 <div>
                     <label for="motivo_atraso">Motivo:</label>
-                    <select name="motivo_atraso" id="motivo_atraso">
-                        <option value="">Todos os Motivos</option>
+                    <select  class="motivo_atraso" name="motivo_atraso" id="motivo_atraso">
+                        <option value="">Todos</option>
                         <option value="motivo1" <?php echo ($motivoAtraso === 'motivo1') ? 'selected' : ''; ?>>Atraso no transporte coletivo</option>
                         <option value="motivo2" <?php echo ($motivoAtraso === 'motivo2') ? 'selected' : ''; ?>>Trânsito</option>
                         <option value="motivo3" <?php echo ($motivoAtraso === 'motivo3') ? 'selected' : ''; ?>>Problemas familiares</option>

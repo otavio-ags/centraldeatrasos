@@ -73,10 +73,10 @@ main{
 
 .input-grupo label {
     position: absolute;
-    top: 50%; /* Posiciona no meio vertical */
+    top: 50%;
     left: 15px;
     transform: translateY(-50%);
-    color: #fff; /* Cor do texto inativo */
+    color: #fff;
     font-size: 16px;
     pointer-events: none;
     transition: all 0.25s ease

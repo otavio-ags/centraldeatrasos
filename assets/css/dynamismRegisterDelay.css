@@ -28,7 +28,7 @@
 #toast-container.warning { background-color: #ff9800; }
 
 input.invalid, select.invalid {
-    border: 2px solid #F44336 !important; 
+    border: 1px solid #F44336 !important; 
     background-color: #fff8f8;
 }
 
@@ -36,7 +36,7 @@ input.invalid, select.invalid {
     color: #F44336;
     font-size: 12px;
     margin-top: -10px;
-    margin-bottom: 10px;
+    margin-bottom: -5px;
     display: none;
     font-weight: bold;
 }
